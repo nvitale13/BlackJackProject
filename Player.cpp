@@ -16,15 +16,25 @@ void Player::showHand(){
 
 void Player::hit(Card card){
   myCards.push_back(card);
+
 }
+
+
 
 void Player::checkHit21(){
   int cardsSum = 0;
+  int totalAces = 0;
   for(int i = 0; myCards.size() != i; i++){
+    if(myCards[i].face == CardFace::Ace) {
+      totalAces++;
+    }
     cardsSum += myCards[i].value;
   }
-  if(cardsSum == 21){
-    std::cout << "You hit 21!" << std::endl;
+  
+  for(int i = 0; i <= totalAces; i++) {
+    if((cardsSum + (i * 10)) == 21){
+      std::cout << "You hit 21!" << std::endl;
+    }
   }
 }
 

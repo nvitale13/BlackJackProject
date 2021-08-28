@@ -36,14 +36,19 @@ int main() {
     // show initial cards
     player.showHand();
     dealer.showHand();
-    
+  
+    // check if initial hand = 21, if not then ask hit or stay
+    player.checkHit21();
+    dealer.checkHit21();
+    player.gameOver();
+    dealer.gameOver();
 
     // read player's choice to hit or stay
     int playerChoice;
     cout << "Player, do you want to hit [1] or stay [0]?: ";
     cin >> playerChoice;
 
-    // hit if player enters "h" key
+    // hit if player enters "1" key
     if(playerChoice == 1){
       player.hit(deck.cards[cardCounter]);
       cardCounter++;

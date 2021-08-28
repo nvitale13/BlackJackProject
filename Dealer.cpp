@@ -24,17 +24,23 @@ bool Dealer::hit(){
 }
 
 void Dealer::hit(Card card){
-  
   myCards.push_back(card);
 }
 
 void Dealer::checkHit21(){
   int cardsSum = 0;
+  int totalAces = 0;
   for(int i = 0; myCards.size() != i; i++){
+    if(myCards[i].face == CardFace::Ace) {
+      totalAces++;
+    }
     cardsSum += myCards[i].value;
   }
-  if(cardsSum == 21){
-    std::cout << "Dealer hit 21!" << std::endl;
+ 
+  for(int i = 0; i <= totalAces; i++) {
+    if((cardsSum + (i * 10)) == 21){
+      std::cout << "Dealer hit 21!" << std::endl;
+    }
   }
 }
 

@@ -13,7 +13,7 @@ Deck::Deck() {
   cards.push_back(Card(CardSuit::Hearts, CardFace::Seven, 7));
   cards.push_back(Card(CardSuit::Hearts, CardFace::Eight, 8));
   cards.push_back(Card(CardSuit::Hearts, CardFace::Nine, 9));
-  cards.push_back(Card(CardSuit::Hearts, CardFace::Ten, 1));
+  cards.push_back(Card(CardSuit::Hearts, CardFace::Ten, 10));
   cards.push_back(Card(CardSuit::Hearts, CardFace::Jack, 10));
   cards.push_back(Card(CardSuit::Hearts, CardFace::Queen, 10));
   cards.push_back(Card(CardSuit::Hearts, CardFace::King, 10));
